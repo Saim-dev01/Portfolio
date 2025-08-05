@@ -15,7 +15,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="w-full max-w-full mx-auto py-8 md:py-16 px-2 md:px-4 bg-gradient-to-b from-[#0a1817] via-[#0a1817] to-black rounded-xl shadow-lg">
+    <section className="w-full max-w-6xl mx-auto py-8 md:py-16 px-2 md:px-4 rounded-xl shadow-lg">
       <h2 className="text-4xl font-extrabold mb-8 text-green-400 text-center tracking-wide">Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
         {projects.map((project, idx) => (
@@ -24,7 +24,7 @@ export default function Projects() {
             className="backdrop-blur-lg bg-black/80 border border-green-900 rounded-xl shadow-lg p-4 md:p-6 flex flex-col justify-between hover:scale-105 transition-transform duration-300"
           >
             <h3 className="text-2xl font-bold mb-3 text-green-300 flex items-center gap-2">
-              <span>{project.title}</span>
+              <span className="text-green-300">{project.title}</span>
               <span className="text-lg">🚀</span>
             </h3>
             <p className="text-gray-200 mb-4 text-left">{project.description}</p>
