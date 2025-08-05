@@ -4,13 +4,14 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import React from 'react';
+import Image from 'next/image';
 
 export default function Home() {
   return (
     <>
       {/* Full site GIF background */}
       <div className="fixed inset-0 w-full h-full -z-10">
-        <img src="/bg1.gif" alt="Site background gif" className="w-full h-full object-cover blur-md" style={{ minHeight: '100vh' }} />
+        <Image src="/bg1.gif" alt="Site background gif" fill priority className="object-cover blur-md" style={{ minHeight: '100vh' }} />
         <div className="absolute inset-0 "></div>
       </div>
       <div className="relative z-10">
@@ -19,7 +20,7 @@ export default function Home() {
           {/* Left: Text */}
           <div className="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left p-8 gap-4">
             <h1 className="text-5xl font-bold mb-4 text-white">
-              Hi, I'm <span className="text-green-400 font-semibold">Muhammad Saim Khan</span>
+              Hi, I&apos;m <span className="text-green-400 font-semibold">Muhammad Saim Khan</span>
             </h1>
             <p className="text-xl text-white-400 mb-6">Full Stack Web Developer | MERN Stack</p>
             <div className="flex flex-wrap gap-4 justify-center md:justify-start mb-8">
@@ -32,10 +33,13 @@ export default function Home() {
           </div>
           {/* Right: Profile Picture */}
           <div className="flex-1 flex justify-center items-center p-8">
-            <img
+            <Image
               src="/pic.jpg"
               alt="Muhammad Saim Khan profile"
-              className="w-100 h-100 rounded-full object-cover shadow-lg border-4 border-white"
+              width={200}
+              height={200}
+              className="w-80 h-80 md:w-80 md:h-80 rounded-full object-cover shadow-lg border-4 border-white mx-auto"
+              priority
             />
           </div>
         </section>
