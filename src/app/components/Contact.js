@@ -5,7 +5,7 @@ import { MdEmail } from 'react-icons/md';
 export default function Contact() {
   return (
     <section className="max-w-xl mx-auto py-12 px-4 text-center bg-black/70 rounded-xl shadow-lg flex flex-col items-center">
-      <h2 className="text-4xl font-extrabold mb-4 text-green-300 tracking-wide">Let's Connect</h2>
+      <h2 className="text-4xl font-extrabold mb-4 text-green-300 tracking-wide">Let&apos;s Connect</h2>
       <p className="text-base text-gray-200 mb-8 max-w-md mx-auto">
   I&apos;m currently looking for new opportunities. My inbox is always open—whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!
       </p>
