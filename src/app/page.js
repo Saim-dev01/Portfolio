@@ -9,12 +9,12 @@ import Image from 'next/image';
 
 export default function Home() {
   // Typing effect states
-  const names = ['Muhammad Saim Khan', 'Web Developer'];
   const [current, setCurrent] = useState(0); // 0: name, 1: role
   const [displayed, setDisplayed] = useState('');
   const [typing, setTyping] = useState(true);
 
   useEffect(() => {
+    const names = ['Muhammad Saim Khan', 'Web Developer'];
     let timeout;
     if (typing) {
       if (displayed.length < names[current].length) {
@@ -35,7 +35,7 @@ export default function Home() {
       }
     }
     return () => clearTimeout(timeout);
-  }, [displayed, typing, current, names]);
+  }, [displayed, typing, current]);
 
   useEffect(() => {
     setDisplayed('');
